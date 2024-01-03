@@ -37,7 +37,6 @@ public class RomanToNumber {
                     if (valueMap.containsKey(prev + ch)) continue;
                 }
                 stack.push(String.valueOf(ch));
-
             } else {
                 if (stack.isEmpty())
                     val += valueMap.get(String.valueOf(ch));

@@ -1,7 +1,5 @@
 package my.preparations.leetcode;
 
-import lombok.Data;
-
 public class ListNode {
     int val;
     ListNode next;
@@ -18,4 +16,14 @@ public class ListNode {
         }
         System.out.print("null");
     }
+
+    public static ListNode fromArray(int[] arr) {
+        ListNode dummy = new ListNode(-1), p = dummy;
+        for (int j : arr) {
+            p.next = new ListNode(j);
+            p = p.next;
+        }
+        return dummy.next;
+    }
+
 }
